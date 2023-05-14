@@ -17,3 +17,10 @@
   transform: rotate(360deg);
   cursor: pointer;
 }
+
+.currentActive {
+  color: #008000;
+}
+* {
+  scroll-behavior: smooth;
+}

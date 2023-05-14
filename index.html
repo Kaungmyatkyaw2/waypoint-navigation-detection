@@ -7,7 +7,7 @@
     <title>Vite App</title>
   </head>
   <body>
-    <nav class="w-full navbar cursor-pointer shadow-sm p-5">
+    <header class="w-full navbar cursor-pointer shadow-sm p-5 fixed bg-white">
       <div class="flex mx-auto items-center justify-between w-[90%]">
         <div class="flex space-x-3 items-center">
           <img
@@ -20,19 +20,27 @@
           <span class="font-bold text-primary">Foddie</span>
         </div>
 
-        <div id="navlist" class="flex text-gray-500 space-x-10">
-          <a href="#home" class="cursor-pointer font-bold hover:text-primary"
+        <nav id="navlist" class="flex text-gray-500 space-x-10">
+          <a
+            href="#home"
+            class="cursor-pointer font-bold hover:text-primary currentActive"
             >Home</a
           >
-          <p class="cursor-pointer font-bold hover:text-primary">About</p>
+          <a href="#about" class="cursor-pointer font-bold hover:text-primary"
+            >About</a
+          >
+          <a
+            href="#services"
+            class="cursor-pointer font-bold hover:text-primary"
+            >Services</a
+          >
           <p class="cursor-pointer font-bold hover:text-primary">Home</p>
           <p class="cursor-pointer font-bold hover:text-primary">Home</p>
-          <p class="cursor-pointer font-bold hover:text-primary">Home</p>
-        </div>
+        </nav>
       </div>
-    </nav>
+    </header>
 
-    <div
+    <section
       id="home"
       class="flex justify-around min-h-screen w-[90%] mx-auto items-center"
     >
@@ -69,7 +77,43 @@
           alt=""
         />
       </div>
+    </section>
+
+    <section id="about" class="bg-gray-100">
+      <div class="w-[90%] mx-auto">
+        <div class="flex min-h-screen justify-around items-center">
+          <div class="w-[40%]">
+            <img
+              src="public/img/about.jpg"
+              class="w-[330px] toRight ms-auto shadow-md"
+              alt=""
+            />
+          </div>
+          <div class="w-[40%]">
+            <div class="">
+              <p class="text-primary font-bold toLeft">About</p>
+              <h3 class="font-bold mt-4 text-lg toLeft">
+                We cook the best tasty food
+              </h3>
+              <p class="w-[80%] mt-1 text-gray-700 mb-5 text-sm toLeft">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
+                fugit cumque, officia sequi ex dolore?
+              </p>
+              <button
+                class="py-2 toLeft hover:bg-green-700 duration-300 px-3 text-sm font-semibold text-white bg-primary rounded-md"
+              >
+                Explorer History
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="min-h-screen" id="services">
+      <h1>min ga lar par</h1>
     </div>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
