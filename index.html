@@ -7,20 +7,69 @@
     <title>Vite App</title>
   </head>
   <body>
-    <nav class="flex mt-3 mx-auto items-center justify-between w-[90%]">
-      <div class="flex space-x-3 items-center">
-        <img src="/public/img/icon.png" height="40" class="w-10" alt="" />
-        <span class="font-bold text-primary">Foddie</span>
-      </div>
+    <nav class="w-full navbar cursor-pointer shadow-sm p-5">
+      <div class="flex mx-auto items-center justify-between w-[90%]">
+        <div class="flex space-x-3 items-center">
+          <img
+            src="/public/img/icon.png"
+            height="40"
+            class="w-10"
+            id="icons"
+            alt=""
+          />
+          <span class="font-bold text-primary">Foddie</span>
+        </div>
 
-      <div id="navlist" class="flex text-gray-500 space-x-10">
-        <p class="cursor-pointer font-bold hover:text-primary">Home</p>
-        <p class="cursor-pointer font-bold hover:text-primary">About</p>
-        <p class="cursor-pointer font-bold hover:text-primary">Home</p>
-        <p class="cursor-pointer font-bold hover:text-primary">Home</p>
-        <p class="cursor-pointer font-bold hover:text-primary">Home</p>
+        <div id="navlist" class="flex text-gray-500 space-x-10">
+          <a href="#home" class="cursor-pointer font-bold hover:text-primary"
+            >Home</a
+          >
+          <p class="cursor-pointer font-bold hover:text-primary">About</p>
+          <p class="cursor-pointer font-bold hover:text-primary">Home</p>
+          <p class="cursor-pointer font-bold hover:text-primary">Home</p>
+          <p class="cursor-pointer font-bold hover:text-primary">Home</p>
+        </div>
       </div>
     </nav>
+
+    <div
+      id="home"
+      class="flex justify-around min-h-screen w-[90%] mx-auto items-center"
+    >
+      <div class="w-[40%]">
+        <div class="space-y-4">
+          <h1 class="text-primary font-bold text-5xl to-down">
+            Tasty <span id="element"></span>
+          </h1>
+          <p class="text-gray-700 to-down">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab magni,
+            quaerat nesciunt harum ea incidunt velit nemo asperiores rerum
+            soluta ipsum nobis quibusdam praesentium dicta ex labore ducimus
+            hic. Tenetur.
+          </p>
+          <p class="text-2xl to-down font-bold">Join the best food of week</p>
+          <div class="flex items-center space-x-3 to-down">
+            <button
+              class="px-2 py-2 text-sm rounded-md bg-primary text-white font-semibold hover:bg-green-800"
+            >
+              ico
+            </button>
+            <button
+              class="px-4 py-2 rounded-md text-black border-primary duration-300 hover:text-white text-sm border font-semibold hover:bg-primary bg-white"
+            >
+              View Menu
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="w-[40%] bg-red-">
+        <img
+          src="public/img/home.png"
+          class="h-[400px] to-down w-[400px]"
+          alt=""
+        />
+      </div>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

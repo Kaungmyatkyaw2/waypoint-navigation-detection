@@ -1,13 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Phudu:wght@300;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Phudu:wght@300;500;600;700;800;900&display=swap");
-
 @layer base {
-  html {
+  body {
     font-family: "Montserrat", sans-serif;
   }
 }
 
-
+#icons {
+  transition: 0.5s;
+}
+.navbar:hover #icons {
+  transform: rotate(360deg);
+  cursor: pointer;
+}
