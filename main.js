@@ -35,61 +35,36 @@ let toLeft = {
 };
 ScrollReveal().reveal(".toLeft", toLeft);
 
-// waypoints
-// new Waypoint({
-//   element: document.getElementById("about"),
-//   handler: function (direction) {
-//     // let old = document.querySelector("currentActive");
-//     // old.classList.remove("currentActive");
-//     let current = document.querySelector(`[href="#about"]`);
-//     if (direction === "down") {
-//       current.classList.add("currentActive");
-//     } else {
-//       current.classList.remove("currentActive");
-//     }
-//   },
-//   offset: "25%",
-// });
+const home = document.querySelector("#home");
+const tabs = document.querySelectorAll(".link");
 
-// new Waypoint({
-//   element: document.getElementById("home"),
-//   handler: function (direction) {
-//     // let old = document.querySelector("currentActive");
-//     // old.classList.remove("currentActive");
-//     let current = document.querySelector(`[href="#home"]`);
-//     if (direction === "down") {
-//       current.classList.add("currentActive");
-//     }
-//   },
-//   offset: "50%",
-// });
-
-// let sections = document.querySelectorAll("section");
-// let navlinks = document.querySelectorAll("header nav a");
-
-// window.onscroll = () => {
-//   sections.forEach((sec) => {
-//     let top = window.screenY;
-//     let offset = sec.offsetTop - 150;
-//     let height = sec.offsetHeight;
-//     let id = sec.getAttribute("id");
-
-//     if (top >= offset && top < offset + height) {
-//       navlinks.forEach((links) => {
-//         links.classList.remove("currentActive");
-//         document
-//           .querySelectorAll(`header nav a [href* = '+ ${id} + ']`)
-//           .classList.add("currentActive");
-//       });
-//     }
-//   });
-// };
-
-let activepage = window.location.href;
-
-const navlinks = document.querySelectorAll("nav a").forEach((link) => {
-  if (link.href.includes(`${activepage}`)) {
-    // console.log(`${activepage}`);
-    link.classList.add("currentActive");
+window.addEventListener("scroll", () => {
+  if (window.scrollY < 100) {
+    tabs.forEach((i) => {
+      if (i.getAttribute("href") === "#home") {
+        i.classList.add("currentActive");
+      } else {
+        i.classList.remove("currentActive");
+      }
+    });
+    return;
+  } else {
+    return;
   }
 });
+
+tabs.forEach((i) => {
+  const href = i.getAttribute("href");
+  const formattedHref = href.substring(1, i.getAttribute("href").length);
+  const ele = document.getElementById(formattedHref);
+  new Waypoint({
+    element: ele,
+    handler: function () {
+      tabs.forEach((i) => i.classList.remove("currentActive"));
+      i.classList.add("currentActive");
+    },
+    continuous: false,
+  });
+});
+
+// tabs[0].classList.add("currentActive");
